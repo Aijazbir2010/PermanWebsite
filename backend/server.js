@@ -4,8 +4,7 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
-
-import { authenticate } from './middleware/authenticate.js'
+import dotenv from 'dotenv';
 
 import EpisodesRouter from './routes/episodes.js'
 import PlayEpisodeRouter from './routes/playepisode.js'
@@ -17,9 +16,11 @@ import PlaylistsRouter from './routes/playlists.js'
 
 import User from './models/User.js';
 
+dotenv.config({ path: '.env.local' });
+
 const app = express();
-const JWT_ACCESS_SECRET = 'perman-website-access-93c572'; // Secret for Access Token
-const JWT_REFRESH_SECRET = 'perman-website-refresh-93c572'; // Secret for Refresh Token
+const JWT_ACCESS_SECRET = process.env.JWT_ACCESS_SECRET;
+const JWT_REFRESH_SECRET = process.env.JWT_REFRESH_SECRET;
 const PORT = 5000;
 
 // Middleware
