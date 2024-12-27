@@ -1,0 +1,28 @@
+# Ignore specific files in the root directory
+/logo.ai
+/permanwebsite.xd
+
+# Ignore the for-ui folder
+/for-ui/
+
+# Ignore specific files and folders in the backend folder
+/backend/.env.local
+/backend/uploads/
+
+# Add other backend folders/files that should not be pushed
+/backend/node_modules/
+/backend/logs/
+/backend/dist/
+/backend/*.log
+
+# Ignore IDE-specific files
+/.idea/
+
+# General rules for all Node.js projects
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+.env
+.DS_Store
+Thumbs.db
+coverage/

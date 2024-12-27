@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --playbuttonOpacity: 0;
+    --playlistEditDeleteIconsOpacity: 0;
+    --profileImgInputLabelOpacity: 0;
+}
+
+/* Target the scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Set the width for vertical scrollbar */
+  }
+  
+  /* Scrollbar track (background of the scrollbar) */
+  ::-webkit-scrollbar-track {
+    background: #0a0e15; /* Light gray background */
+    border-radius: 6px; /* Rounded corners */
+  }
+  
+  /* Scrollbar thumb (draggable part) */
+  ::-webkit-scrollbar-thumb {
+    background: #2176FF; /* Medium gray thumb */
+    border-radius: 6px; /* Rounded corners */
+  }
+  
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in WebKit-based browsers */
+}
+
+/* Prevent scrolling when modal is open */
+.no-scroll {
+    overflow: hidden;
+}
+
+.swiper {
+    width: 95%;
+    height: 95%;
+    padding: 20px;
+    z-index: 1;
+}
+
+.reviews-swiper .swiper-button-next,
+.reviews-swiper .swiper-button-prev {
+  background-color: #2176ff;
+  color: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  opacity: 0.2;
+}
+
+.reviews-swiper .swiper-slide {
+    opacity: 0.3;
+    transition: opacity 0.3s, background-color 0.3s ease-in-out;
+}
+
+.reviews-swiper .swiper-slide-active {
+    opacity: 1;/* Full opacity for active slide */
+    transform: scale(1.1) !important;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+
+.swiper {
+    padding: 20px !important;
+}
+
+.reviews-swiper .swiper-button-next:hover,
+.reviews-swiper .swiper-button-prev:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    transition: transform 0.3s;
+} 
+
+@media screen and (min-width: 600px) {
+    .reviews-swiper .swiper-button-next,
+    .reviews-swiper .swiper-button-prev {
+        opacity: 1;
+    }
+}
+
+.playbutton-playlist {
+    opacity: var(--playbuttonOpacity);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.playbutton-playlist:hover {
+    transform: scale(1.1);
+}
+
+.swiper-slide:hover, .swiper-slide-active:hover {
+    --playbuttonOpacity: 1;
+    --playlistEditDeleteIconsOpacity: 1;
+}
+
+.playlist-page-card:hover {
+    --playbuttonOpacity: 1;
+    --playlistEditDeleteIconsOpacity: 1;
+}
+
+.profile-img-input-label {
+    opacity: var(--profileImgInputLabelOpacity);
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+.profile-img-input-label:hover {
+    --profileImgInputLabelOpacity: 1;
+    opacity: var(--profileImgInputLabelOpacity);
+}
+
+.icons {
+    opacity: var(--playlistEditDeleteIconsOpacity);
+}
+
+
+/* Spinner */
+.spinner {
+    height: 50px;
+    width: 50px;
+    border: 5px solid rgba(33, 118, 255, 0.2);
+    border-top: 5px solid #2176FF;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
