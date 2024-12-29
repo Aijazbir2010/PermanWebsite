@@ -1,6 +1,7 @@
 # Ignore specific files in the root directory
 /logo.ai
 /permanwebsite.xd
+/excelsheet.xlsx
 
 # Ignore the for-ui folder
 /for-ui/
