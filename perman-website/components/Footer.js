@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
 
         <div className='flex justify-center'>
-            <span className='text-[#A7AAA7] absolute bottom-5'>&copy; sumirexmitsuo {new Date().getFullYear()} All Rights Reserved</span>
+            <span className='text-[#A7AAA7] absolute bottom-5'>&copy; {new Date().getFullYear()} Perman Website. All Rights Reserved</span>
         </div>
     </div>
   )
