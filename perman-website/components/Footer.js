@@ -24,10 +24,10 @@ const Footer = () => {
 
             <div className="about flex flex-col justify-center items-center">
                 <h2 className='font-bold text-4xl mb-6'>About</h2>
-                <div className='text-[#A7AAA7] flex flex-row items-center gap-2 mb-2 hover:text-[#2176FF] cursor-pointer transition-colors duration-300'>
+                <a href={"https://aijazbir.vercel.app"} target={"_blank"} rel={"noopener noreferrer"} className='text-[#A7AAA7] flex flex-row items-center gap-2 mb-2 hover:text-[#2176FF] cursor-pointer transition-colors duration-300'>
                     <LanguageIcon/>
                     <span>Portfolio</span>
-                </div>
+                </a>
             </div>
 
             <div className="socialMedia flex flex-col justify-center items-center">
